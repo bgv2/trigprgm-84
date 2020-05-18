@@ -1,0 +1,35 @@
+"TrigPrgm"
+ClrHome
+Menu("Choose an option.","Cosine",CO,"Sine (Not finished)",SI)
+Lbl SI
+Disp "This option hasn't been finished."
+Stop
+Lbl CO
+Menu("Select missing side.","Side A",SA,"Side B",SB,"Side C",SC)
+Lbl SA
+Disp "Enter side"
+Prompt B
+Prompt C
+Disp "Enter angle"
+Prompt A
+Disp sqrt((B^2)+(C^2)-2BC*cos(A))
+Goto SO
+Lbl SB
+Disp "Enter side"
+Prompt A
+Prompt C
+Disp "Enter angle"
+Prompt B
+Disp sqrt((A^2)+(C^2)-2AC*cos(B))
+Goto SO
+Lbl SC
+Disp "Enter side"
+Prompt A
+Prompt B
+Disp "Enter angle"
+Prompt C
+Disp sqrt((A^2)+(B^2)-2AB*cos(C))
+Goto SO
+Lbl SO
+Disp "Press Enter to return to the start."
+Stop
